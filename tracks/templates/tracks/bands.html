@@ -1,0 +1,17 @@
+{% extends 'tracks/base.html' %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<ul>
+    {% for band in bands %}
+        <li>
+            <h3> {{ band.band_name }}</h3>
+            <p class='band_link'><a href='{{ band.get_absolute_url }}'> Альбомы </a></p>
+            <p>  {{ band.band_popularity }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
